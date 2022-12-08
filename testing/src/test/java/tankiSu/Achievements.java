@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.DefaultElementLocatorFactory;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class Achievements {
 
@@ -23,7 +24,8 @@ public class Achievements {
         PageFactory.initElements(new DefaultElementLocatorFactory(webDriver), this);
     }
     public Achievements ChangeOptions() throws InterruptedException {
-        Thread.sleep(5);
+        driver.manage().timeouts().implicitlyWait(5000,
+                TimeUnit.MILLISECONDS);
         Actions action = new Actions(driver);
         action.moveToElement(menuOptions);
         action.perform();
