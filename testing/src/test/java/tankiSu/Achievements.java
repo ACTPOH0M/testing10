@@ -22,8 +22,8 @@ public class Achievements {
         this.driver = webDriver;
         PageFactory.initElements(new DefaultElementLocatorFactory(webDriver), this);
     }
-    public Achievements ChangeOptions()
-    {
+    public Achievements ChangeOptions() throws InterruptedException {
+        Thread.sleep(5);
         Actions action = new Actions(driver);
         action.moveToElement(menuOptions);
         action.perform();
