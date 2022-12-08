@@ -32,8 +32,7 @@ public class Testing {
     }
 
     @Test
-    public void FindRatingYesterday()
-    {
+    public void FindRatingYesterday() throws InterruptedException {
         new HomePage(webDriver)
                 .openPage()
                 .ClickMainMenuFirstButton()
